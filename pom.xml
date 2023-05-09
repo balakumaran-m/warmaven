@@ -1,12 +1,22 @@
-<build>
-  <plugins>
-    <plugin>
-      <groupID>org.apache.maven.plugin</groupID>
-      <artifactID>maven-war-plugin</artifactID>
-      <version>3.2.3</version>
-      <configuration>
-        <webXml>path/to/web.xml</WebXml>
-      </configuration>
-    </plugin>
-  </plugins>
-</build>
+<plugin>
+<groupId>org.jboss.as.plugins</groupId>
+<artifactId>jboss-as-maven-plugin</artifactId>
+<version>7.9.Final</version>
+<executions>
+<execution>
+<phase>install</phase>
+<goals>
+<goal>deploy</goal>
+</goals>
+
+<configuration>
+<hostname>localhost</hostname>
+<username>laksh</username>
+<password>laksh</password>
+<port>8080</port>
+</configuration> 
+</execution>
+</executions>
+</plugin>
+
+ 
