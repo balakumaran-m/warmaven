@@ -1,22 +1,29 @@
-<plugin>
-<groupId>org.jboss.as.plugins</groupId>
-<artifactId>jboss-as-maven-plugin</artifactId>
-<version>7.9.Final</version>
-<executions>
-<execution>
-<phase>install</phase>
-<goals>
-<goal>deploy</goal>
-</goals>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-<configuration>
-<hostname>localhost</hostname>
-<username>laksh</username>
-<password>laksh</password>
-<port>8080</port>
-</configuration> 
-</execution>
-</executions>
-</plugin>
+  <groupId>com.example</groupId>
+  <artifactId>my-web-app</artifactId>
+  <version>1.0.0</version>
+  <packaging>war</packaging>
+
+  <dependencies>
+    <!-- Add your dependencies here -->
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>
+          <warName>my-web-app</warName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
 
  
